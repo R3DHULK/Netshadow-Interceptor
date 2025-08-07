@@ -1,0 +1,150 @@
+/* Sponsor tab styles */
+.sponsor-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.sponsor-heading {
+    color: var(--accent-primary);
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 255, 170, 0.3);
+}
+
+.sponsor-text {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.sponsor-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.sponsor-option {
+    flex: 1;
+    background: rgba(16, 20, 30, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px 15px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.sponsor-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 170, 0.2);
+}
+
+.sponsor-option.featured {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.3);
+}
+
+.sponsor-badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.sponsor-option-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.sponsor-price {
+    color: var(--accent-secondary);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sponsor-benefits {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.sponsor-benefits li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.sponsor-benefits li:before {
+    content: "✓";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+}
+
+.sponsor-btn {
+    width: 100%;
+    padding: 8px 0;
+    background-color: rgba(0, 136, 255, 0.1);
+    border: 1px solid var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.sponsor-btn:hover {
+    background-color: rgba(0, 136, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+}
+
+.sponsor-btn.featured {
+    background-color: rgba(0, 255, 170, 0.1);
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.sponsor-btn.featured:hover {
+    background-color: rgba(0, 255, 170, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+.sponsor-alternative {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(16, 20, 30, 0.5);
+    border-radius: 6px;
+}
+
+.sponsor-alternative h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.sponsor-alternative p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.donation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.donation-btn {
+    padding: 8px 15px;
+    min-width: 60px;
+    background-color: rgba(0, 136, 255, 0.1);
+    border: 1px solid var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.donation-btn:hover {
+    background-color: rgba(0, 136, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.5);
+}

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "NetShadow Interceptor",
+    "version": "1.0",
+    "description": "Intercept, modify and repeat web requests with a hacker-style interface",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "NetShadow Interceptor",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "icon.png",
+        "96": "icon.png"
+    }
+}

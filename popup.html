@@ -1,0 +1,192 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetShadow Interceptor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sponsor.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>NetShadow<span>Interceptor</span></h1>
+            <div class="toggle-container">
+                <span class="toggle-label">Intercept</span>
+                <label class="toggle">
+                    <input type="checkbox" id="interceptToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="filter-container">
+                    <input type="text" id="requestFilter" placeholder="Filter requests...">
+                    <button id="clearBtn" class="btn" title="Clear History">×</button>
+                </div>
+                <div class="request-list" id="requestList">
+                    <!-- Requests will be populated here -->
+                </div>
+            </div>
+
+            <div class="detail-panel" id="detailPanel">
+                <div class="panel-tabs">
+                    <button class="tab-btn active" data-tab="request">Request</button>
+                    <button class="tab-btn" data-tab="response">Response</button>
+                    <button class="tab-btn" data-tab="repeater">Repeater</button>
+                    <button class="tab-btn" data-tab="sponsor">Sponsor</button>
+                </div>
+
+                <div class="tab-content active" id="requestTab">
+                    <div class="request-info">
+                        <div class="url-method-container">
+                            <select id="requestMethod" disabled>
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="PATCH">PATCH</option>
+                                <option value="HEAD">HEAD</option>
+                                <option value="OPTIONS">OPTIONS</option>
+                            </select>
+                            <input type="text" id="requestUrl" disabled>
+                        </div>
+
+                        <div class="section">
+                            <h3>Headers</h3>
+                            <div class="headers-container" id="requestHeaders">
+                                <!-- Request headers will be shown here -->
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3>Body</h3>
+                            <textarea id="requestBody" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="responseTab">
+                    <div class="response-info">
+                        <div class="status-container">
+                            <span>Status: </span>
+                            <span id="responseStatus" class="status-code">-</span>
+                        </div>
+
+                        <div class="section">
+                            <h3>Headers</h3>
+                            <div class="headers-container" id="responseHeaders">
+                                <!-- Response headers will be shown here -->
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3>Body</h3>
+                            <textarea id="responseBody" disabled></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="sponsorTab">
+                    <div class="sponsor-container">
+                        <h2 class="sponsor-heading">Support NetShadow Interceptor</h2>
+                        <p class="sponsor-text">If you find this tool useful, please consider supporting its continued
+                            development.</p>
+
+                        <div class="sponsor-options">
+                            <div class="sponsor-option">
+                                <div class="sponsor-option-title">Basic Supporter</div>
+                                <div class="sponsor-price">$5/month</div>
+                                <ul class="sponsor-benefits">
+                                    <li>Support ongoing development</li>
+                                    <li>Name in supporters list</li>
+                                </ul>
+                                <button class="btn sponsor-btn">Become a Supporter</button>
+                            </div>
+
+                            <div class="sponsor-option featured">
+                                <div class="sponsor-badge">POPULAR</div>
+                                <div class="sponsor-option-title">Pro Supporter</div>
+                                <div class="sponsor-price">$10/month</div>
+                                <ul class="sponsor-benefits">
+                                    <li>All Basic benefits</li>
+                                    <li>Early access to new features</li>
+                                    <li>Priority support</li>
+                                </ul>
+                                <button class="btn sponsor-btn featured">Become a Pro Supporter</button>
+                            </div>
+
+                            <div class="sponsor-option">
+                                <div class="sponsor-option-title">Enterprise Sponsor</div>
+                                <div class="sponsor-price">$50/month</div>
+                                <ul class="sponsor-benefits">
+                                    <li>All Pro benefits</li>
+                                    <li>Custom feature requests</li>
+                                    <li>Commercial license</li>
+                                    <li>Dedicated support channel</li>
+                                </ul>
+                                <button class="btn sponsor-btn">Become an Enterprise Sponsor</button>
+                            </div>
+                        </div>
+
+                        <div class="sponsor-alternative">
+                            <h3>One-time donation</h3>
+                            <p>Prefer to make a one-time contribution? That helps too!</p>
+                            <div class="donation-buttons">
+                                <button class="btn donation-btn">$5</button>
+                                <button class="btn donation-btn">$10</button>
+                                <button class="btn donation-btn">$25</button>
+                                <button class="btn donation-btn">$50</button>
+                                <button class="btn donation-btn">Custom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="repeaterTab">
+                    <div class="repeater-info">
+                        <div class="url-method-container">
+                            <select id="repeaterMethod">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="PATCH">PATCH</option>
+                                <option value="HEAD">HEAD</option>
+                                <option value="OPTIONS">OPTIONS</option>
+                            </select>
+                            <input type="text" id="repeaterUrl">
+                        </div>
+
+                        <div class="section">
+                            <h3>Headers</h3>
+                            <div class="headers-editor" id="repeaterHeaders">
+                                <!-- Editable headers will go here -->
+                                <button class="btn add-header" id="addHeaderBtn">+ Add Header</button>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h3>Body</h3>
+                            <textarea id="repeaterBody"></textarea>
+                        </div>
+
+                        <div class="button-container">
+                            <button id="sendRequestBtn" class="btn send-btn">Send Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="sponsor.js"></script>
+</body>
+
+</html>
