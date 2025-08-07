@@ -69,4 +69,4 @@ This extension is built using vanilla JavaScript, HTML, and CSS. To contribute:
 
 ## License
 
-MIT License
+GPT 3.0 License
